@@ -5,6 +5,8 @@
 	<title>Test Work</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 </head>
 <body>
@@ -43,6 +45,7 @@
 		<div class="partners__block"><a href="#"><img src="./img/Regional-Center.png" alt=""></a></div>
 		<div class="partners__block"><a href="#"><img src="./img/Partnership-Health-Plan.png" alt=""></a></div>
 		<div class="partners__block"><a href="#"><img src="./img/Aetna.png" alt=""></a></div>
+		<div class="partners__block"><a href="#"><img src="./img/Kaiser-Permanente.png" alt=""></a></div>
 	</section>
 	<section class="support">
 		<h2 class="support__h2">Support For People Of All Walks of Life</h2>
@@ -58,6 +61,7 @@
 	<section class="slider-section">
 		<div  class="slider-section__wrapper">
 			<img class="slider-section__img" src="./img/Layer.png" alt="image">
+			<img class="slider-section__img" src="./img/LA.jpg" alt="image">
 		</div>
 	</section>
 	<section class="join-team">
@@ -93,24 +97,13 @@
 		<small class="footer__copy">Copyright &copy; 2017 McGrews Behavior Services All Rights Reserved</small>
 	</footer>
 
-	<script>
-		function burger(){
-			var burger = document.getElementById('burger');
-			var links = document.getElementById('links');
-			var quit = document.getElementById('quit');
-			burger.style.padding = '16px 16px 200vw 200vw';
-			links.style.display = 'flex';
-			quit.style.display = 'inline';
-		}
 
-		function quit(){
-			var burger = document.getElementById('burger');
-			var links = document.getElementById('links');
-			var quit = document.getElementById('quit');
-			burger.style.padding = '16px 16px 32px 32px';
-			links.style.display = 'none';
-			quit.style.display = 'none';
-		}
-	</script>
+	<script src="js/menu.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script src="js/slider2.js"></script>
+	<script src="js/slider1.js"></script>
+
 </body>
 </html>
