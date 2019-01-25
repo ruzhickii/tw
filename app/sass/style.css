@@ -688,6 +688,10 @@ body {
   background-color: #008ea5;
 }
 
+.partners-mobile {
+  display: none;
+}
+
 .partners {
   display: flex;
   flex-wrap: wrap;
@@ -913,11 +917,6 @@ body {
   color: #e1aa6e;
 }
 
-@media only screen and (max-width: 320px) {
-  .support__p {
-    max-width: 400px;
-  }
-}
 @media only screen and (max-width: 640px) {
   .support__p {
     max-width: 400px;
@@ -930,6 +929,10 @@ body {
     max-height: 500px;
     height: 500px;
   }
+
+  .partners-mobile {
+    display: block;
+  }
 }
 @media only screen and (max-width: 768px) {
   .navigation {
@@ -938,6 +941,10 @@ body {
 
   #burger {
     display: block;
+  }
+
+  .slider-section_hide {
+    display: none;
   }
 }
 

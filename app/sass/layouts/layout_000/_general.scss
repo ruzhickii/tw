@@ -200,6 +200,10 @@ body {
 
 // Partners section
 
+.partners-mobile {
+  display: none;
+}
+
 .partners {
   display: flex;
   flex-wrap: wrap;
@@ -279,6 +283,7 @@ body {
 }
 
 // Slider section
+
 
 .slider-section {
   height: 600px;
