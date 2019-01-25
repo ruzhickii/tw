@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Test Work</title>
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 </head>
 <body>
@@ -13,8 +13,15 @@
 			<div class="logo">
 				<img class="logo__img" src="./img/Logo.png" alt="logo">
 			</div>
+			<i id="burger" class="material-icons" onclick="burger()">menu</i>
+			<i id="quit" class="material-icons" onclick="quit()">clear</i>
+			<div id="links">
+				<a class="navigation__a" href="#">home</a>
+				<a class="navigation__a" href="#">about us</a>
+				<a class="navigation__a" href="#">contact</a>
+			</div>
 			<nav class="navigation">
-				<ul class="navigation__ul">
+				<ul class="navigation__ul" id="navigation">
 					<li class="navigation__li"><a class="navigation__a" href="#">home</a></li>
 					<li class="navigation__li"><a class="navigation__a" href="#">about us</a></li>
 					<li class="navigation__li"><a class="navigation__a" href="#">contact</a></li>
@@ -49,14 +56,12 @@
 		</div>
 	</section>
 	<section class="slider-section">
-		<div class="slider-section__wrapper">
+		<div  class="slider-section__wrapper">
 			<img class="slider-section__img" src="./img/Layer.png" alt="image">
 		</div>
 	</section>
 	<section class="join-team">
-		<div class="join-team__img-block">
-			<img class="join-team__img" src="./img/Picture.png" alt="team">
-		</div>
+		<div class="join-team__img-block"></div>
 		<div class="text-block-wrapper">
 			<div class="text-block">
 				<p class="text-block__p">Be a part of something bigger than yourself. Make a difference.</p>
@@ -88,10 +93,24 @@
 		<small class="footer__copy">Copyright &copy; 2017 McGrews Behavior Services All Rights Reserved</small>
 	</footer>
 
+	<script>
+		function burger(){
+			var burger = document.getElementById('burger');
+			var links = document.getElementById('links');
+			var quit = document.getElementById('quit');
+			burger.style.padding = '16px 16px 200vw 200vw';
+			links.style.display = 'flex';
+			quit.style.display = 'inline';
+		}
 
-
-
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		function quit(){
+			var burger = document.getElementById('burger');
+			var links = document.getElementById('links');
+			var quit = document.getElementById('quit');
+			burger.style.padding = '16px 16px 32px 32px';
+			links.style.display = 'none';
+			quit.style.display = 'none';
+		}
+	</script>
 </body>
 </html>

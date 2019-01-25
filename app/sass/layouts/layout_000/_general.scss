@@ -18,6 +18,52 @@ body {
 
 // default styles !
 
+// Burger menu
+
+#burger {
+  display: none;
+}
+
+#burger{
+  position: fixed;
+  right: 0;
+  top: 0;
+  color: white;
+  background: #e4943c;
+  font-size: 32px;
+  padding: 16px 16px 32px 32px;
+  border-radius: 0% 0% 0% 100%;
+  transition: 1s;
+  cursor: pointer;
+}
+
+#quit{
+  position: fixed;
+  top: 0;
+  color: $white;
+  font-size: 32px;
+  padding: 16px;
+  display: none;
+  cursor: pointer;
+}
+
+#links{
+  display: none;
+  flex-direction: column;
+  width: 100vw;
+  height: 50vh;
+  padding: 25vh 0;
+  justify-content: space-around;
+}
+
+#links a{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  z-index: 10;
+}
+
 // Help section
 
 .help-section {
@@ -38,7 +84,8 @@ body {
   align-items: center;
 
  .logo {
-    margin-left: 30px;
+    margin: 0 30px;
+
 
    &__img {
      width: 100%
@@ -47,6 +94,7 @@ body {
 
   .navigation {
     margin-right: 29px;
+
 
     &__ul {
       display: flex;
@@ -159,26 +207,30 @@ body {
   align-items: center;
 
   &__block {
-    margin: 35px 0;
+    margin: 35px 15px;
   }
 }
 
 // Support section
 
 .support {
-  background-color: $turquoise;
-  background-image: url("../../../img/Vector Smart.png");
-  background-attachment: inherit;
-  background-position: bottom;
+  background: {
+    color: $turquoise;
+    image: url("../../../img/Vector Smart.png");
+    attachment: inherit;
+    position: bottom;
+  }
 
   &__h2 {
-    color: #fff;
+    color: $white;
     max-width: 898px;
     margin: 0 auto;
-    text-align: center;
-    font-size: 48px;
-    font-weight: 900;
     padding-top: 90px;
+    text-align: center;
+    font: {
+      size: 48px;
+      weight: 900;
+    }
   }
 
   &__p {
@@ -217,12 +269,12 @@ body {
     max-width: 780px;
     margin: 0 auto;
     text-align: center;
-    color: #777;
+    color: $darkerGray;
+    line-height: 30px;
     font: {
       size: 18px;
       weight: 400;
     }
-    line-height: 30px;
   }
 }
 
@@ -230,11 +282,13 @@ body {
 
 .slider-section {
   height: 600px;
-  background-image: url("../../../img/Layer-2.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: $lightTurquoise;
+  background: {
+    image: url("../../../img/Layer-2.png");
+    size: cover;
+    position: center;
+    attachment: fixed;
+    color: $lightTurquoise;
+  };
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -254,6 +308,7 @@ body {
 
 // Join team section
 
+
 .join-team {
   margin-top: 110px;
   display: flex;
@@ -261,11 +316,14 @@ body {
 
   &__img-block {
     flex-basis: 50%;
+    background: {
+      image: url("../../../img/Picture.png");
+      size: cover;
+      position: center;
+      attachment: inherit;
+      color: $lightTurquoise;
+    };
 
-  }
-
-  &__img {
-    width: 100%;
   }
 
   .text-block-wrapper {
@@ -297,7 +355,7 @@ body {
 
     &__span {
       padding-bottom: 15px;
-      border-bottom: 4px solid #00b5d2;
+      border-bottom: 4px solid $turquoise;
     }
 
     &__description {
@@ -317,17 +375,17 @@ body {
 .footer {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
 
   &__line {
     margin-top: 60px;
-    width: 100%;
     background-color: $gray;
     height: 3px;
   }
 
   &__border {
-    width: 948px;
+    max-width: 948px;
     height: 1px;
     background-color: $lightGray;
     margin-top: 50px;
@@ -336,6 +394,7 @@ body {
   &__copy {
     margin: 32px 0 55px 0;
     color: $lighterGray;
+    text-align: center;
     font: {
       size: 12px;
       weight: 400;
@@ -352,16 +411,14 @@ body {
   &__ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   &__li {
-    margin-left: 50px;
+    margin: 20px;
+    min-width: 85px;
   }
 
-  &__li:first-child {
-    margin-left: 0;
-  }
 
   &__a {
     text-decoration: none;

@@ -1,0 +1,12 @@
+.support__p {
+  max-width: 400px;
+}
+
+.join-team {
+  flex-direction: column;
+
+  &__img-block {
+    max-height: 500px;
+    height: 500px;
+  }
+}
